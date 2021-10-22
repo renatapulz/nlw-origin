@@ -21,24 +21,24 @@
         </section>
         <section>
           <h1>Renata Pulz</h1>
-          <a href="https://github.com/renatapulz">
+          <a href="https://github.com/renatapulz" target="_blank">
             <img src="images/github.svg" alt="Ícone github" />
             renatapulz</a
           >
           <p>Estudante</p>
         </section>
-        <ul>
-          <li>
-            <a href="https://www.youtube.com/c/RocketSeat" target="_blank">
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://www.youtube.com/maykbrito" target="_blank">
               <img
                 src="images/youtube.svg"
                 alt="Link para o youtube da Rocketseat"
               />
             </a>
           </li>
-          <li>
+          <li class="instagram">
             <a
-              href="https://www.instagram.com/rocketseat_oficial/?hl=pt-br"
+              href="https://www.instagram.com/maykbrito/?hl=pt-br"
               target="_blank"
             >
               <img
@@ -47,19 +47,16 @@
               />
             </a>
           </li>
-          <li>
-            <a href="https://www.facebook.com/rocketseat/" target="_blank">
+          <li class="facebook">
+            <a href="https://www.facebook.com/maykbrito/" target="_blank">
               <img
                 src="images/facebook.svg"
                 alt="Link para o facebook da Rocketseat"
               />
             </a>
           </li>
-          <li>
-            <a
-              href="https://twitter.com/rocketseat?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-              target="_blank"
-            >
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank">
               <img
                 src="images/twitter.svg"
                 alt="Link para o twitter da Rocketseat"
@@ -69,5 +66,23 @@
         </ul>
       </div>
     </main>
+    <script>
+      const socialMedia = {
+        github: 'renatapulz',
+        youtube: 'rocketseat',
+        facebook: 'rocketseat',
+        instagram: 'rocketseat_oficial',
+        twitter: 'rocketseat'
+      }
+
+      function changeSocialMedia() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+          li.children[0].href = `https://${social}.com/${socialMedia[social]}`
+        }
+      }
+
+      changeSocialMedia()
+    </script>
   </body>
 </html>
