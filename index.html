@@ -17,22 +17,30 @@
           <span>
             <img src="images/build.svg" alt="Imagem selo Rocketseat" />
           </span>
-          <img src="images/foto.jpg" alt="Imagem pessoal do crachá" />
+          <img
+            id="userAvatar"
+            src="images/foto.jpg"
+            alt="Imagem pessoal para o crachá"
+          />
         </section>
         <section>
-          <h1>Renata Pulz</h1>
-          <a href="https://github.com/renatapulz" target="_blank">
+          <h1 id="userName">Mayk Brito</h1>
+          <a href="https://github.com/maykbrito" target="_blank">
             <img src="images/github.svg" alt="Ícone github" />
-            renatapulz</a
+            <span id="userLogin">maykbrito</span></a
           >
-          <p>Estudante</p>
+          <p id="userBio">Estudante</p>
         </section>
         <ul id="socialLinks">
           <li class="youtube">
-            <a href="https://www.youtube.com/maykbrito" target="_blank">
+            <a
+              id="userLink"
+              href="https://www.youtube.com/maykbrito"
+              target="_blank"
+            >
               <img
                 src="images/youtube.svg"
-                alt="Link para o youtube da Rocketseat"
+                alt="Link para o youtube da maykbrito"
               />
             </a>
           </li>
@@ -43,7 +51,7 @@
             >
               <img
                 src="images/insta.svg"
-                alt="Link para o instagram da Rocketseat"
+                alt="Link para o instagram do maykbrito"
               />
             </a>
           </li>
@@ -51,7 +59,7 @@
             <a href="https://www.facebook.com/maykbrito/" target="_blank">
               <img
                 src="images/facebook.svg"
-                alt="Link para o facebook da Rocketseat"
+                alt="Link para o facebook do maykbrito"
               />
             </a>
           </li>
@@ -59,30 +67,13 @@
             <a href="https://twitter.com/maykbrito" target="_blank">
               <img
                 src="images/twitter.svg"
-                alt="Link para o twitter da Rocketseat"
+                alt="Link para o twitter do maykbrito"
               />
             </a>
           </li>
         </ul>
       </div>
     </main>
-    <script>
-      const socialMedia = {
-        github: 'renatapulz',
-        youtube: 'rocketseat',
-        facebook: 'rocketseat',
-        instagram: 'rocketseat_oficial',
-        twitter: 'rocketseat'
-      }
-
-      function changeSocialMedia() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-          li.children[0].href = `https://${social}.com/${socialMedia[social]}`
-        }
-      }
-
-      changeSocialMedia()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
