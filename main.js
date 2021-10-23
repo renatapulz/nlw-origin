@@ -18,6 +18,7 @@ changeSocialMedia()
 function getInfos() {
   const url = `https://api.github.com/users/${socialMedia.github}`
 
+  //fetch= bate na url e pega a resposta / .then = promessa
   fetch(url)
     .then(response => response.json())
     .then(data => {
